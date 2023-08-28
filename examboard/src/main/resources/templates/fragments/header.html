@@ -10,11 +10,14 @@
                 </ul>
 
                 <div class="text-end">
-                    <a role="button" id="signup" class="btn btn-outline-light me-2"
-                       th:href="@{/user/signup}"
-                    sec:authorize="isAnonymous()">회원가입</a>
-                    <a role="button" id="login" class="btn btn-outline-light me-2"
-                       th:href="@{/user/login}"
+                    <a role="button" id="kakao-login" class="btn btn-outline-light me-2"
+                       sec:authorize="isAnonymous()"
+                       th:href="@{/oauth2/authorization/kakao}">
+                        <img alt="kakao login"
+                             src="/images/kakao_login_medium.png" style="border:0px;">
+                    </a>
+                    <a role="button" id="signup" class="btn btn-outline-light me-2" th:href="@{/user/signup}" sec:authorize="isAnonymous()">회원가입</a>
+                    <a role="button" id="login" class="btn btn-outline-light me-2" th:href="@{/user/login}"
                        sec:authorize="isAnonymous()">Login</a>
                     <a role="button" id="logout" class="btn btn-outline-light me-2"
                        th:href="@{/logout}"
